@@ -8,17 +8,20 @@
         <h5>Ejemplo 02</h5>
         <div class="mermaid">
           classDiagram
-    class BankAccount
-    BankAccount : +String id
-    BankAccount : +Bigdecimal balance
-    BankAccount : +deposit(amount)
-    BankAccount : +withdrawal(amount)
+            class Sancion
+            Sancion : +String observacion
+            Sancion : +Bigdecimal multa
 
-    class Persona
-    Persona : +String name
-    Persona : +int miedad
-    Persona "1" --> "*" BankAccount
+            class Jugador
+            Jugador : +String nombre
+            Jugador : +String apellido
+            Jugador "1" --> "*" Sancion
 
+            class Equipo
+            Equipo : +String nombre
+            Equipo : +String tipoDeporte
+            Equipo : +String siglas
+            Equipo "1" --> "*" Jugador
         </div>
     </body>
 </html>
